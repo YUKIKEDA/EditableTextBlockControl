@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EditableTextBlockControl"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="編集可能テキストブロック デモ" Height="450" Width="800">
+    
+    <StackPanel Margin="20">
+        <TextBlock Text="以下のテキストをクリックして編集してください：" 
+                 Margin="0,0,0,20"/>
+        
+        <Border BorderBrush="LightGray" 
+                BorderThickness="1" 
+                Margin="0,0,0,10">
+            <local:EditableTextBlock Text="編集可能なテキスト" 
+                                   MaxLength="20"
+                                   Margin="5"
+                                   FontSize="16"/>
+        </Border>
+        
+        <Border BorderBrush="LightGray" 
+                BorderThickness="1" 
+                Margin="0,0,0,10">
+            <local:EditableTextBlock Text="別のテキストブロック" 
+                                   Margin="5"
+                                   FontSize="16"/>
+        </Border>
+        
+        <TextBlock Text="使い方：" 
+                 Margin="0,20,0,10"
+                 FontWeight="Bold"/>
+        
+        <TextBlock Text="1. テキストをクリックして編集モードを開始" 
+                 Margin="20,0,0,5"/>
+        <TextBlock Text="2. Enterキーで編集を確定" 
+                 Margin="20,0,0,5"/>
+        <TextBlock Text="3. Escapeキーで編集をキャンセル" 
+                 Margin="20,0,0,5"/>
+        <TextBlock Text="4. フォーカスを失うと自動的に編集モードが終了" 
+                 Margin="20,0,0,5"/>
+    </StackPanel>
 </Window>
